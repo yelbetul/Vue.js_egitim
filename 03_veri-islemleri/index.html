@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Denemesi </title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="ilk-uygulama">
+        <h2>İsim: {{ name }}</h2>
+        <p>Meslek: {{ job }}</p>
+        <p>Yaş: {{ age }}</p>
+        <hr>
+        <p>Şapka var mı? : {{ giyim.sapka }}</p>
+        <p>Pantolon Tipi : {{ giyim.pantolon }}</p>
+        <p>Ayakkabı var mı? : {{ giyim.ayakkabi }}</p>
+        <hr>
+        <p>Yetenek 1: {{ yetenek[0] }}</p>
+        <p>Yetenek 2: {{ yetenek[1] }}</p>
+        <p>Yetenek 3: {{ yetenek[2] }}</p>
+        <p>Yetenek 4: {{ yetenek[3] }}</p>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
