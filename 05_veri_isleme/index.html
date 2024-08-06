@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veri İşleme</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>İsim : {{ name }}</p>
+        <p>Meslek : {{ job }}</p>
+        <p>Website : <a v-bind:href="website">Benim Websitem</a></p>
+        <p><a :href="website">V-bind -> : ile belirtildi.</a></p>
+        <input type="text" :value="name">
+        <hr>
+        <p v-html="websiteTag"></p>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
