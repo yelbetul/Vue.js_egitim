@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döngü İşlemleri</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Döngü İşlemleri</h1>
+        <ul>
+            <li v-for="karakter in karakterler">{{ karakter }}</li>
+        </ul>
+        <br><br>
+        <ul>
+            <li v-for="(ozellik,index) in ozellikler">{{index}}.{{ ozellik.name }} - {{ ozellik.age }}</li>
+        </ul>
+        <!-- bu şekilde yazınca ayrı ayrı div oluşturdu -->
+        <div v-for="(ozellik,index) in ozellikler">
+            <h3>{{ index}}. {{ozellik.name }}</h3>
+            <p>{{ ozellik.age }}</p>
+        </div>
+        <hr>
+        <template v-for="(ozellik,index) in ozellikler">
+            <h3>{{ index}}. {{ozellik.name }}</h3>
+            <p>{{ ozellik.age }}</p>
+        </template>
+        <hr>
+        <template v-for="(ozellik,index) in ozellikler">
+            <div>
+                <h3>{{ index}}. {{ozellik.name }}</h3>
+                <p>{{ ozellik.age }}</p>
+            </div>
+        </template>
+        <template v-for="(ozellik,index) in ozellikler">
+            <div v-for="(value,key) in ozellik">
+                <p>{{ key }}: {{ value }}</p>
+            </div>
+        </template>
+    </div>
+
+
+</body>
+<script src="app.js"></script>
+
+</html>
