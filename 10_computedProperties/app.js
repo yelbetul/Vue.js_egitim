@@ -25,7 +25,7 @@ createApp({
         },
         bYeEkle: function(){
             console.log("B kontrol edildi")
-            return this.b + this.age
+            return this.b  + this.age
         }
     }
 }).mount("#app");
