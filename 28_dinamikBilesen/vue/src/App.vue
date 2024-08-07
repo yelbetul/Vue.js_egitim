@@ -1,54 +1,23 @@
 <template>
-  <alt-bilesen>
-    <template #form-header>
-      <h2>Giriş Formu</h2>
-      <p>Giriş yapabilmek için lütfen formu doldurun.</p>
-    </template>
-    <template #form-elements>
-      <label for="email">E-Posta</label>
-      <input type="email" name="email" placeholder="E-Posta adresini giriniz.">
-
-      <label for="password">Şifre</label>
-      <input type="password" name="password" placeholder="Şifrenizi giriniz.">
-    </template>
-    <template #form-controls>
-      <button>Giriş Yap</button>
-    </template>
-
-  </alt-bilesen>
+<component v-bind:is="component"></component>
+<button v-on:click="component='form-one'">Form1 i Göster</button>
+<button v-on:click="component='form-two'">Form2 i Göster</button>
 </template>
 <script>
-import altBilesen from './components/alt-bilesen.vue';
+import formOne from './components/form-one.vue';
+import formTwo from './components/form-two.vue';
 export default {
   components: {
-    "alt-bilesen": altBilesen,
+    "form-one": formOne,
+    "form-two":formTwo
   },
   data() {
     return {
-
+      component:'form-two'
     }
   }
 }
 </script>
 <style scoped>
-:deep(input){
-    width: 100%;
-    border: 1px solid #e2e2e2;
-    height: 35px;
-    border-radius: 5px;
-    margin: 5px 0 15px 0;
-    padding-left: 15px;
-}
-:global(h2){
-  color:red
-}
-</style>
-<style module>
-.blue{
-  color:blue;
-}</style>
-<style module="xbilesen">
-.green{
-  color:green;
-}
+
 </style>
