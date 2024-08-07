@@ -1,10 +1,9 @@
 <template>
-    <h2>Bu da global css için</h2>
     <form action="#">
         <div class="container">
             <div class="container-inner">
                 <div class="form-header">
-                    <slot name="form-header"><p>{{ title }}</p></slot>
+                    <slot name="form-header"></slot>
                 </div>
                 <div class="form-elements">
                     <div class="form-elements-inner">
@@ -28,15 +27,6 @@
         </div>
     </form>
 </template>
-<script>
-export default{
-    data(){
-        return{
-            title:"Betül"
-        }
-    }
-}
-</script>
 <style scoped>
 .container {
     width: 100%;

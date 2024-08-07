@@ -1,7 +1,6 @@
 <template>
   <h1>Slotlar</h1>
   <alt-bilesen>
-
     <template #baslik>
       <h2>{{title}}</h2>
     </template>
