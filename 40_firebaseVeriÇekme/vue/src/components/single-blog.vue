@@ -32,7 +32,7 @@ export default {
     },
     created() {
         self = this;
-        fetch("https://vue-playlist-e58d1-default-rtdb.firebaseio.com/posts" + self.id + ".json", {
+        fetch("https://vue-playlist-e58d1-default-rtdb.firebaseio.com/post/" + self.id + ".json", {
             method: "GET",
             header: {
                 "Content-Type": "application/json"
